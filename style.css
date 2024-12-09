@@ -1,0 +1,471 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styles */
+header {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styling */
+header .logo {
+    font-size: 1.8em;
+    color: #ff6f00;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/* Navigation Links */
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+header nav .nav-link:hover {
+    color: #ff6f00;
+}
+
+/* Search Bar */
+header .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .search-bar input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+header .search-bar input:focus {
+    outline: none;
+    border-color: #ff6f00;
+    box-shadow: 0 0 8px rgba(255, 111, 0, 0.5);
+}
+
+header .search-bar button {
+    background-color: #ff6f00;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+header .search-bar button:hover {
+    background-color: #e65c00;
+}
+
+/* Theme Toggle Button */
+header .theme-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+header .theme-btn:hover {
+    transform: rotate(15deg);
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #6a11cb;
+}
+
+/* Burger Menu Button */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header .actions {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header .search-bar input {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .nav-links {
+        display: none; /* Hide the navigation links initially */
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #1c1c1c;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show navigation links when active */
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    header .search-bar input {
+        width: 150px;
+    }
+
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    #trendingMovies h1 {
+        font-size: 1.5em;
+    }
+
+}
+
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#trendingMovies {
+    margin-top: 20px;
+}
+
+#trendingMovies h1 {
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: black;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.movies-grid div {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movies-grid div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.movies-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 3px solid #ff6f00;
+}
+
+.movies-grid h3 {
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: center;
+    color: #444;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 599px;
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #121212;
+    color: #ddd;
+}
+
+body.dark header {
+    background-color: #333;
+}
+
+body.dark footer {
+    background-color: #333;
+}
+
+body.dark .movies-grid div {
+    background-color: #1c1c1c;
+}
+
+body.dark .movies-grid h3 {
+    color: #ddd;
+}
+
+body.dark .search-bar input {
+    border-color: #444;
+    background-color: #333;
+    color: #ddd;
+}
+
+body.dark .search-bar input:focus {
+    box-shadow: 0 0 8px rgba(255, 111, 0, 0.7);
+
+
+
+}
+
+body.dark #trendingMovies h1{
+    color: white;
+}
+
+
+/* General Styles
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+} */
+
+/* About Banner Section */
+.about-banner {
+    background: linear-gradient(to right, #ff6f00, #ff8e33);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.about-banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about-banner p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* About Content Section */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.about-text {
+    flex: 1 1 50%;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    color: #ff6f00;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.features h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feature-item {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item h3 {
+    color: #ff6f00;
+    margin-bottom: 10px;
+}
+
+/* Team Section */
+.team {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    color: #ff6f00;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 0.9em;
+    color: #555;
+}

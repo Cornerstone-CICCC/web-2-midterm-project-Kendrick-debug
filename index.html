@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlickFusion - Trending Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+            <div class="container">
+                <a href="index.html" class="logo">FlickFusion</a>
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </nav>
+                <button class="burger-menu" id="burgerMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        
+                <!-- Search and Theme Toggle -->
+                <div class="actions">
+                    <div class="search-bar">
+                        <input type="text" id="searchInput" placeholder="Search for movies or TV shows...">
+                        <button id="searchButton">🔍</button>
+                    </div>
+                    <button id="darkModeToggle" class="theme-btn">🌙</button>
+                </div>
+            </div>
+        </header>
+    <main>
+        <section id="trendingMovies">
+            <h1>Trending Movies</h1>
+            <div class="movies-grid" id="moviesGrid"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 FlickFusion. All rights reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
